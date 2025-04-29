@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+.modal-dialog {
+  top: 20%;
+}
+
+.modal-title {
+  font-family: "Merienda", cursive;
+  text-align: center;
+  width: 100%;
+}
+
+.modal-body {
+  font-family: "Winky Sans", sans-serif;
+  text-align: center;
+  width: 100%;
+}
+
+.modal-footer {
+  font-family: "Winky Sans", sans-serif;
+  justify-content: center;
+  width: 100%;
+}
+
+.modal-content {
+  background-color: #ffffffad;
+}
+
+:root {
+  --primary-color: #8b05055c;
+  --secondary-color: #ececec;
+  --text-dark: #595959;
+  --text-light: #a3a3a3;
+  --white: #ffffff;
+  --max-width: 100%;
+  --gradient-1: linear-gradient(to bottom, #120505, var(--primary-color));
+}
+
+* {
+  font-family: "Winky Sans", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url(img/fondo1.jpg);
+  background-position: center;
+  background-size: contain;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  background: linear-gradient(to right, #201f1f76, #a3181834);
+  position: fixed;
+  isolation: isolate;
+  width: 100%;
+  top: 0;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  z-index: 9;
+  border-radius: 0 0 25px 25px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav__header {
+  background: linear-gradient(to right, #201f1f, #a31818);
+  padding: 0.1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.nav_img {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 1rem;
+}
+
+.nav_img img {
+  height: 60px;
+  width: auto;
+}
+
+.nav_img h3 {
+  font-family: "Merienda", cursive;
+  color: var(--white);
+  font-size: 26px;
+  margin: 0;
+  margin-bottom: 20px;
+  margin-left: 2rem;
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.nav__links {
+  background: linear-gradient(to right, #201f1f, var(--primary-color));
+  position: absolute;
+  top: 60px;
+  right: 0;
+  display: flex;
+  align-items: end;
+  justify-content: right;
+  flex-direction: column;
+  gap: 3rem;
+  transition: 0.5s;
+  z-index: -1;
+  transform: translateY(-100%);
+  border-radius: 0 0 25px 25px;
+  padding: 1rem;
+}
+
+.nav__links li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav__links img{
+  width: 20px;
+  height: auto;
+  margin-right: 3px;
+}
+
+.nav__links a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.nav__links a:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+/**//**//**//**//**//**//**//**//**//**/
+
+.header__container {
+  margin: 1rem 9rem 0 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.header__image img {
+  width: 250px;
+  height: auto;
+  border-radius: 0 100px 0 100px;
+}
+
+.header__content {
+  max-width: 600px;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--white);
+  line-height: 3rem;
+  text-align: center;
+  display: block;
+}
+
+.title h3{
+  font-family: "Merienda", cursive;
+  color: var(--white);
+}
+
+.section__description {
+  color: var(--text-light);
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.header__btns {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.header__btns a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.header__btns a:hover {
+  color: #a31818;
+  text-decoration: none;
+}
+
+.header__btns a span {
+  transition: 0.3s;
+}
+
+.header__btns a:hover span {
+  transform: translateX(5px);
+}
+
+@media (width > 600px) {
+  nav {
+    position: static;
+    padding-block: 2rem 1rem;
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .nav__header {
+    flex: 1;
+    padding: 0;
+    gap: 1rem;
+    background-image: none;
+  }
+
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
+    position: static;
+    padding: 0;
+    flex-direction: row;
+    background-image: none;
+    transform: none;
+  }
+
+  .title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    text-align: center;
+    display: block;
+    padding: 0 9rem 0 9rem;
+  }
+
+  .section__description {
+    font-size: 0.95rem;
+    padding: 0 5rem;
+  }
+}
